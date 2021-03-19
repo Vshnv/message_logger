@@ -24,6 +24,7 @@ func CreateFirebaseApp(keyPath string) (*firebase.App, error) {
 	return app, nil
 }
 
+//
 func CreateFirestoreClient(app *firebase.App) (*db.Client, error) {
 	client, err := app.Database(Ctx)
 	if err != nil {
