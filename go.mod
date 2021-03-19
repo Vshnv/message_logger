@@ -8,5 +8,6 @@ require (
 	firebase.google.com/go v3.13.0+incompatible
 	firebase.google.com/go/v4 v4.2.0 // indirect
 	github.com/gorilla/mux v1.8.0
+	github.com/mattn/go-sqlite3 v1.14.6
 	google.golang.org/api v0.42.0
 )

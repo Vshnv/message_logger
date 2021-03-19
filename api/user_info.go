@@ -34,6 +34,6 @@ func HandleUserInfo(w http.ResponseWriter, r *http.Request, client *db.Client) {
 		http.Error(w, err.Error(), http.StatusNotAcceptable)
 		return
 	}
-	ref, err := client.NewRef("userinfo").Child(p.Username).Push(firebase.Ctx, p.ExtractIpInfo())
-	fmt.Println("UserInfo: ", ref)
+	go client.NewRef("userinfo").Child(p.Username).Push(firebase.Ctx, p.ExtractIpInfo())
+	fmt.Println("User Added!")
 }
